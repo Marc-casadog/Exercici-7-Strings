@@ -1,7 +1,14 @@
-Pseudocodi Exercici 7 
-Posar 50 preguntes amb 4 respostes a b c d cadascuna
-
-
+/*Pseudocodi Exercici 7 
+Los objetivos de este ejercicio son:
+  -Uso de la línea de comandos para interactuar con el usuario
+  -Uso de sentencias condicionales
+  -Uso de String
+  -Uso Java Documentation
+Desarrolla un programa en Java que presente una pregunta al usuario con 4 posibles respuestas
+(a,b,c,d). Sólo una de las respuestas será correcta. Permite que el usuario seleccione la respuesta (a, b,
+c, d) que considera correcta e indícale si ha acertado o no. Si no introduce un valor válido (a, b, c, d) el
+programa termina. En las siguientes imágenes se muestran unos ejemplos de ejecución del programa: 
+*/
 /*
 
 INICI
