@@ -1,18 +1,21 @@
 import java.util.Scanner;
 
 void main() {
-     Scanner sc = new Scanner(System.in);
+     Scanner sc = new Scanner (System.in);
 
-     String[] preguntes = new String[50];
+    String[] preguntes = new String[50];
     String[] opcioA = new String[50];
     String[] opcioB = new String[50];
     String[] opcioC = new String[50];
     String[] opcioD = new String[50];
     String[] solucions = new String[50];
 
-    int[] comptador = new int[50];
-    String[] resposta = new String [50];
-    boolean[] continuar = new boolean [50];
+    int comptador;
+    String resposta;
+    boolean continuar;
+
+    comptador = 0;
+    continuar = true;
 
 
     // Pregunta 1
@@ -415,19 +418,60 @@ void main() {
     opcioD[49] = "@version";
     solucions[49] = "b";
 
+    while (comptador < 50 && continuar == true) {
+        
+        System.out.println("\npregunta" + comptador +1);
+        System.out.println(preguntes[comptador]);
 
+        System.out.println("a) " + opcioA[comptador]);
+        System.out.println("b) " + opcioB[comptador]);
+        System.out.println("c) " + opcioC[comptador]);
+        System.out.println("d) " + opcioD[comptador]);
 
+        System.out.print("Introdueix la resposta (a, b, c o d): ");
+        resposta = sc.nextLine();
+        
+        if (resposta.equals("a") || resposta.equals("b") ||
+                resposta.equals("c") || resposta.equals("d")) {
 
+            if (resposta.equals(solucions[comptador])) {
+                System.out.println("Correcte");
+            } else {
+                System.out.println("Incorrecte");
+            }
 
+            comptador++;
 
+        } else {
+            System.out.println("Resposta no vàlida. El qüestionari ha finalitzat.");
+            continuar = false;
+        }
+    }
 
+    if (comptador == 50) {
+        System.out.println("\nHas completat les preguntes");
+    }
 
-
-
-
-
-
-
+    System.out.println("Final");
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
